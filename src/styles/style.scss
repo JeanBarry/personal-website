@@ -1,0 +1,279 @@
+@font-face {
+    font-family:'FiraCode';
+    font-display: swap;
+    src: url("../assets/fonts/FiraCode-Regular.ttf") /* TTF file for CSS3 browsers */
+}
+
+html{
+    font-family: 'FiraCode', sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*,*::before,*::after{
+    box-sizing: inherit;
+}
+
+body{
+    margin: 0;
+    background: #000000;
+    overflow-x:hidden;
+}
+
+a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+nav{
+    background: black;
+    height: 12vh;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+
+    ul{
+        margin: 0;
+        display:flex;
+        justify-content: space-around;
+        justify-self: flex-end;
+        flex-basis: 40%;
+    }
+
+    li{
+        list-style-type: none;
+        color: #ffffff;
+        margin: 0;
+    }
+}
+
+.title{
+    align-self: flex-start;
+    flex-basis: 65%;
+}
+
+.menu-list{
+    flex-basis: 35%;
+}
+
+.nav-container{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.container{
+    width: 90%;
+}
+
+.main-section{ //v-header
+    height: 88vh;
+    display:flex;
+    align-items:center;
+    color:#fff;
+}
+
+.main-container{ //container
+    text-align:center;
+    position: relative;
+}
+
+.main-content{
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    z-index:2;
+
+    h1{
+        font-size:72px;
+        margin-bottom:0;
+    }
+
+    .information{
+        font-size:1.5rem;
+        display:block;
+        padding-bottom:2rem;
+    }
+}
+
+.designer{
+    font-style: italic;
+}
+
+.video-wrap{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height:88vh;
+    overflow:hidden;
+
+    video{
+        min-height:100%;
+        min-width:100%;
+    }
+}
+.main-coding{
+    height: 100vh;
+    background: #424242;
+}
+
+.overlay{
+    height:88vh;
+  position: absolute;
+  top:0;
+  left:0;
+  width:100vw;
+  z-index:1;
+  background:#000000;
+  opacity:0.75;
+}
+
+.contact{
+    height: 90vh;
+    background: #000000;
+    padding-top: 2em;
+
+    .contact-title{
+        color: #ffffff;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 48px;
+    }
+}
+
+.contact-form{
+    padding-top: 2em;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.input-box{
+    font-size: 1.3em;
+    width: 50%;
+    margin-bottom: 1.5em;
+}
+
+.input-area{
+    font-size: 1.3em;
+    width: 50%;
+    height: 200px;
+    margin-bottom: 1.5em;
+    resize: none;
+}
+
+.send-button{
+    font-size: 1.3em;
+    width: 30%;
+    height: 50px;
+}
+
+footer{
+    height: 10vh;
+    background: #424242;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+}
+
+.footer-container{
+    font-size: 12px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.f-left{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-basis: 50%;
+}
+
+.f-right{
+    flex-basis: 50%;
+    justify-self: flex-end;
+}
+
+.footer-list{
+    list-style-type: none;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+}
+
+$redColor: rgba(244,67,54,1);
+$blueColor:rgba(33,150,243,1);
+
+.icon-3d{
+    padding: 10px;
+    animation: icon3d 200ms 10;
+    color: #fff;
+    &:hover {
+        animation: icon3d 200ms infinite;
+    }
+  }
+  
+  @keyframes icon3d {
+    0% {
+      text-shadow: 5px 4px $redColor, -5px -6px $blueColor;
+    }
+    25% {
+      text-shadow: -5px -6px $redColor, 5px 4px $blueColor;
+    }
+    50% {
+      text-shadow: 5px -4px $redColor, -8px 4px $blueColor;
+    }
+    75% {
+      text-shadow: -8px -4px $redColor, -5px -4px $blueColor;
+    }
+    100% {
+      text-shadow: -5px 0 $redColor, 5px -4px $blueColor;
+    }
+  }
+
+  .visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
+  .m-ico{
+    padding: 10px;
+  }
+
+  .f-1x{
+      font-size: 1em;
+  }
+
+  .f-2x{
+      font-size: 2em;
+  }
+
+  .f-3x{
+      font-size: 3em;
+  }
+
+  /* @media only screen and (max-height: 620px) and (min-width: 649px){
+      .main-coding{
+          display: none;
+      }
+
+      .contact{
+          display: none;
+      }
+
+      .contact-icon{
+          display: none;
+      }
+  } */
