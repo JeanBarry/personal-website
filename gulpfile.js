@@ -9,6 +9,7 @@ const cssnano = require('cssnano');
 // Variables
 const files = {
     indexLocation : 'src/index.html',
+    faviconLocation : 'src/*.ico',
     scssLocation : 'src/styles/**/*.scss',
     jsLocation : 'src/scripts/**/*.js'
 };
@@ -16,6 +17,8 @@ const files = {
 //copy src files
 function copyTask(){
     return src(files.indexLocation)
+    .pipe(dest('public'))
+    .pipe(src(files.faviconLocation))
     .pipe(dest('public'));
 }
 
